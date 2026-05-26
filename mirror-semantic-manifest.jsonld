@@ -1,0 +1,82 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://nexarium.us/mirror",
+  "name": "MIRROR — AI Reflection Interface",
+  "alternateName": "MIRROR",
+  "headline": "AI-powered semantic reflection and continuity interface",
+  "description": "MIRROR is an experimental semantic reflection interface exploring the long-term relationship between human cognition, identity, memory, interpretation, and digital continuity within AI-assisted environments.",
+  "dateCreated": "2026-05-26",
+  "datePublished": "2026-05-26",
+  "dateModified": "2026-05-26",
+  "inLanguage": "en",
+  "keywords": [
+    "AI Reflection",
+    "Semantic Memory",
+    "Identity Continuity",
+    "Digital Continuity",
+    "Machine-Readable Memory",
+    "Semantic Cognition",
+    "AI Infrastructure",
+    "NEXARIUM"
+  ],
+  "genre": [
+    "Artificial Intelligence",
+    "Semantic Infrastructure",
+    "Digital Identity",
+    "Research Interface"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Nicholas Van-Orton"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Nicholas Van-Orton"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NEXARIUM",
+    "url": "https://nexarium.us"
+  },
+  "maintainer": {
+    "@type": "Organization",
+    "name": "NEXARIUM"
+  },
+  "url": "https://nexarium.us/mirror",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nexarium.us/mirror"
+  },
+  "image": "https://nexarium.us/assets/mirror-cover.jpg",
+  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "isAccessibleForFree": true,
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Researchers, AI Infrastructure Developers, Digital Continuity Researchers"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Semantic Reflection"
+    },
+    {
+      "@type": "Thing",
+      "name": "Identity Continuity"
+    },
+    {
+      "@type": "Thing",
+      "name": "Machine-Readable Memory"
+    },
+    {
+      "@type": "Thing",
+      "name": "Artificial Intelligence"
+    }
+  ],
+  "abstract": "MIRROR investigates continuity-oriented AI reflection systems capable of preserving semantic identity structures, interpretive models, and long-term digital memory through machine-readable infrastructures.",
+  "copyrightYear": "2026",
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Nicholas Van-Orton"
+  }
+}
