@@ -35,6 +35,7 @@
 
 html{
     scroll-behavior:smooth;
+    font-size:16px;
 }
 
 body{
@@ -93,7 +94,7 @@ body{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2rem;
+    font-size:clamp(2rem,3vw,2.4rem);
     font-weight:700;
 
     color:var(--gold);
@@ -106,7 +107,7 @@ nav{
     display:flex;
     align-items:center;
 
-    gap:30px;
+    gap:34px;
 
     flex-wrap:wrap;
 }
@@ -119,7 +120,10 @@ nav a{
 
     text-decoration:none;
 
-    font-size:0.92rem;
+    font-size:1rem;
+    font-weight:500;
+
+    letter-spacing:.01em;
 
     transition:.3s ease;
 }
@@ -169,7 +173,7 @@ nav a:hover::after{
 .hero-content{
 
     width:100%;
-    max-width:980px;
+    max-width:1100px;
 }
 
 .hero-label{
@@ -184,36 +188,43 @@ nav a:hover::after{
 
     text-transform:uppercase;
 
-    font-size:.76rem;
+    font-size:.88rem;
+    font-weight:500;
 }
 
 .hero h1{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:clamp(4.5rem,10vw,8rem);
+    font-size:clamp(4.8rem,10vw,8rem);
 
-    line-height:.9;
+    line-height:.92;
 
     letter-spacing:-0.05em;
 
-    margin-bottom:32px;
+    margin-bottom:34px;
 }
 
 .hero p{
 
-    max-width:760px;
+    max-width:700px;
 
     color:var(--text-soft);
 
-    font-size:1.06rem;
+    font-size:1.18rem;
 
     line-height:2;
+
+    font-weight:400;
 }
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-buttons{
 
-    margin-top:50px;
+    margin-top:54px;
 
     display:flex;
     flex-wrap:wrap;
@@ -231,7 +242,7 @@ nav a:hover::after{
     align-items:center;
     justify-content:center;
 
-    padding:16px 34px;
+    padding:18px 36px;
 
     border-radius:999px;
 
@@ -239,7 +250,8 @@ nav a:hover::after{
 
     transition:.35s ease;
 
-    font-size:.92rem;
+    font-size:1rem;
+    font-weight:600;
 }
 
 .primary{
@@ -248,8 +260,6 @@ nav a:hover::after{
 
     color:#111;
 
-    font-weight:600;
-
     box-shadow:
         0 10px 30px rgba(212,175,55,0.22);
 }
@@ -257,6 +267,9 @@ nav a:hover::after{
 .primary:hover{
 
     transform:translateY(-4px);
+
+    box-shadow:
+        0 14px 34px rgba(212,175,55,0.26);
 }
 
 .secondary{
@@ -273,6 +286,9 @@ nav a:hover::after{
     transform:translateY(-4px);
 
     border-color:rgba(212,175,55,0.25);
+
+    background:
+        rgba(255,255,255,0.06);
 }
 
 /* =========================================================
@@ -281,16 +297,16 @@ nav a:hover::after{
 
 main{
 
-    width:min(1180px,92%);
+    width:min(1240px,92%);
 
     margin:auto;
 
     display:flex;
     flex-direction:column;
 
-    gap:42px;
+    gap:48px;
 
-    padding-bottom:120px;
+    padding-bottom:140px;
 }
 
 /* =========================================================
@@ -301,7 +317,7 @@ main{
 
     position:relative;
 
-    padding:58px;
+    padding:64px;
 
     border-radius:var(--radius);
 
@@ -366,11 +382,13 @@ main{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:3rem;
+    font-size:clamp(2.8rem,4vw,3.6rem);
 
-    margin-bottom:26px;
+    margin-bottom:30px;
 
     letter-spacing:-0.03em;
+
+    line-height:1.05;
 }
 
 .glass-card p{
@@ -379,9 +397,9 @@ main{
 
     line-height:2;
 
-    font-size:1rem;
+    font-size:1.12rem;
 
-    max-width:920px;
+    max-width:980px;
 }
 
 /* =========================================================
@@ -390,19 +408,19 @@ main{
 
 .principles-grid{
 
-    margin-top:42px;
+    margin-top:48px;
 
     display:grid;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(250px,1fr));
+        repeat(auto-fit,minmax(280px,1fr));
 
-    gap:24px;
+    gap:26px;
 }
 
 .principle-item{
 
-    padding:30px;
+    padding:34px;
 
     border-radius:28px;
 
@@ -420,13 +438,16 @@ main{
 
     border-color:
         rgba(212,175,55,0.18);
+
+    background:
+        rgba(255,255,255,0.04);
 }
 
 .principle-item span{
 
     color:var(--gold);
 
-    font-size:.76rem;
+    font-size:.82rem;
 
     letter-spacing:.24em;
 
@@ -436,18 +457,20 @@ main{
 .principle-item h3{
 
     margin:
-        18px 0 14px;
+        20px 0 16px;
 
-    font-size:1.34rem;
+    font-size:1.5rem;
+
+    line-height:1.2;
 }
 
 .principle-item p{
 
     color:var(--text-soft);
 
-    line-height:1.9;
+    line-height:1.95;
 
-    font-size:.96rem;
+    font-size:1.02rem;
 }
 
 /* =========================================================
@@ -456,9 +479,9 @@ main{
 
 .specification-box{
 
-    margin-top:34px;
+    margin-top:36px;
 
-    padding:30px;
+    padding:34px;
 
     border-radius:28px;
 
@@ -470,16 +493,16 @@ main{
 
 .spec-block{
 
-    margin-bottom:22px;
+    margin-bottom:24px;
 }
 
 .spec-label{
 
     display:block;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
-    font-size:.72rem;
+    font-size:.8rem;
 
     letter-spacing:.22em;
 
@@ -498,7 +521,7 @@ main{
 
     color:#d0d0d0;
 
-    font-size:.84rem;
+    font-size:.96rem;
 }
 
 .spec-link{
@@ -507,13 +530,16 @@ main{
     align-items:center;
     justify-content:center;
 
-    padding:14px 20px;
+    padding:15px 22px;
 
     border-radius:16px;
 
     text-decoration:none;
 
     color:var(--gold);
+
+    font-size:1rem;
+    font-weight:500;
 
     background:
         rgba(255,255,255,0.03);
@@ -532,19 +558,30 @@ main{
 
     border-color:
         rgba(212,175,55,0.26);
+
+    box-shadow:
+        0 8px 24px rgba(212,175,55,0.08);
 }
 
 /* =========================================================
-   FOOTER
+   PREMIUM FOOTER
 ========================================================= */
 
 footer{
 
-    margin-top:80px;
+    margin-top:100px;
 
-    padding:90px 7%;
+    padding:110px 7%;
 
-    border-top:1px solid rgba(255,255,255,0.05);
+    border-top:
+        1px solid rgba(212,175,55,0.08);
+
+    background:
+        linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.01),
+        rgba(255,255,255,0.02)
+        );
 }
 
 .footer-inner{
@@ -558,48 +595,154 @@ footer{
     display:flex;
     flex-direction:column;
 
-    gap:22px;
+    gap:30px;
 }
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
 
 .footer-inner h3{
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2.4rem;
+    font-size:clamp(2.4rem,5vw,3.2rem);
 
     color:var(--gold);
+
+    letter-spacing:.03em;
 }
+
+/* =========================================================
+   DOMAIN LINKS
+========================================================= */
 
 .footer-links{
 
     display:flex;
+
     justify-content:center;
     flex-wrap:wrap;
 
-    gap:18px;
+    gap:14px;
 }
 
-.footer-links a,
-.footer-email{
+.footer-links a{
 
-    color:#b8b8b8;
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:
+        rgba(255,255,255,0.03);
+
+    border:
+        1px solid rgba(255,255,255,0.05);
+
+    color:#cfcfcf;
 
     text-decoration:none;
 
-    transition:.3s ease;
+    font-size:.96rem;
+
+    transition:.35s ease;
 }
 
-.footer-links a:hover,
+.footer-links a:hover{
+
+    color:var(--gold);
+
+    background:
+        rgba(212,175,55,0.08);
+
+    border-color:
+        rgba(212,175,55,0.22);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(212,175,55,0.08);
+}
+
+/* =========================================================
+   FOOTER META
+========================================================= */
+
+.footer-meta{
+
+    color:var(--text-dim);
+
+    font-size:1rem;
+
+    line-height:1.9;
+}
+
+/* =========================================================
+   EMAIL BOX
+========================================================= */
+
+.footer-email{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:auto;
+
+    padding:16px 26px;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:1.05rem;
+    font-weight:500;
+
+    background:
+        linear-gradient(
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.02)
+        );
+
+    border:
+        1px solid rgba(212,175,55,0.14);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+
+    transition:.35s ease;
+}
+
 .footer-email:hover{
 
     color:var(--gold);
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(212,175,55,0.34);
+
+    box-shadow:
+        0 12px 32px rgba(212,175,55,0.12);
 }
+
+/* =========================================================
+   FOOTER TEXT
+========================================================= */
 
 footer p{
 
     color:var(--text-dim);
 
-    line-height:1.8;
+    line-height:2;
+
+    font-size:1rem;
 }
 
 /* =========================================================
@@ -645,6 +788,66 @@ footer p{
 }
 
 /* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1024px){
+
+    .navbar{
+
+        padding:20px 5%;
+    }
+
+    nav{
+
+        gap:24px;
+    }
+
+    nav a{
+
+        font-size:.96rem;
+    }
+
+    .hero{
+
+        padding:
+            200px 5%
+            110px;
+    }
+
+    .hero h1{
+
+        font-size:
+            clamp(4rem,10vw,6rem);
+    }
+
+    .hero p{
+
+        font-size:1.1rem;
+    }
+
+    .glass-card{
+
+        padding:52px 42px;
+    }
+
+    .glass-card h2{
+
+        font-size:2.7rem;
+    }
+
+    .glass-card p{
+
+        font-size:1.08rem;
+    }
+
+    footer{
+
+        padding:90px 5%;
+    }
+}
+
+/* =========================================================
    MOBILE FIX
 ========================================================= */
 
@@ -657,41 +860,46 @@ footer p{
         flex-direction:column;
         align-items:flex-start;
 
-        gap:14px;
+        gap:16px;
     }
 
     nav{
 
         width:100%;
 
-        gap:14px;
+        gap:18px;
     }
 
     nav a{
 
-        font-size:.82rem;
+        font-size:.92rem;
     }
 
     .hero{
 
         padding:
-            190px 5%
+            180px 5%
             90px;
+    }
+
+    .hero-label{
+
+        font-size:.82rem;
     }
 
     .hero h1{
 
         font-size:
-            clamp(3.3rem,16vw,5rem);
+            clamp(3.4rem,16vw,5rem);
 
         line-height:.98;
     }
 
     .hero p{
 
-        font-size:.97rem;
+        font-size:1rem;
 
-        line-height:1.9;
+        line-height:1.95;
     }
 
     .hero-buttons{
@@ -704,18 +912,20 @@ footer p{
     .btn{
 
         width:100%;
+
+        font-size:1rem;
     }
 
     main{
 
         width:94%;
 
-        gap:28px;
+        gap:30px;
     }
 
     .glass-card{
 
-        padding:34px 22px;
+        padding:36px 24px;
 
         border-radius:28px;
     }
@@ -727,16 +937,16 @@ footer p{
 
     .glass-card h2{
 
-        font-size:2.1rem;
+        font-size:2.3rem;
 
         line-height:1.08;
     }
 
     .glass-card p{
 
-        font-size:.96rem;
+        font-size:1rem;
 
-        line-height:1.9;
+        line-height:1.95;
     }
 
     .principles-grid{
@@ -748,7 +958,7 @@ footer p{
 
     .principle-item{
 
-        padding:26px 22px;
+        padding:28px 24px;
     }
 
     .principle-item:hover{
@@ -756,9 +966,24 @@ footer p{
         transform:none;
     }
 
+    .principle-item h3{
+
+        font-size:1.32rem;
+    }
+
+    .principle-item p{
+
+        font-size:1rem;
+    }
+
     .specification-box{
 
-        padding:22px;
+        padding:24px;
+    }
+
+    .hash-value{
+
+        font-size:.92rem;
     }
 
     .spec-link{
@@ -772,12 +997,32 @@ footer p{
 
     footer{
 
-        padding:70px 5%;
+        padding:80px 5%;
+    }
+
+    .footer-inner{
+
+        gap:24px;
+    }
+
+    .footer-inner h3{
+
+        font-size:2.2rem;
     }
 
     .footer-links{
 
-        gap:14px;
+        gap:10px;
+    }
+
+    .footer-links a{
+
+        width:100%;
+    }
+
+    .footer-email{
+
+        width:100%;
     }
 
     /* ===== MOBILE REVEAL FIX ===== */
@@ -789,4 +1034,4 @@ footer p{
         transform:none !important;
     }
 
-}
+              }
