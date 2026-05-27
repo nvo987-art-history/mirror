@@ -496,6 +496,11 @@ main{
     margin-bottom:24px;
 }
 
+.spec-block:last-child{
+
+    margin-bottom:0;
+}
+
 .spec-label{
 
     display:block;
@@ -511,11 +516,20 @@ main{
     color:rgba(255,255,255,0.45);
 }
 
+/* =========================================================
+   FIXED HASH OVERFLOW BUG
+========================================================= */
+
 .hash-value{
 
     display:block;
 
+    width:100%;
+
+    overflow-wrap:anywhere;
     word-break:break-word;
+
+    white-space:normal;
 
     line-height:1.9;
 
@@ -524,11 +538,18 @@ main{
     font-size:.96rem;
 }
 
+/* =========================================================
+   SPEC LINKS
+========================================================= */
+
 .spec-link{
 
-    display:inline-flex;
+    display:flex;
+
     align-items:center;
     justify-content:center;
+
+    width:100%;
 
     padding:15px 22px;
 
@@ -541,12 +562,22 @@ main{
     font-size:1rem;
     font-weight:500;
 
+    text-align:center;
+
     background:
         rgba(255,255,255,0.03);
 
     border:1px solid rgba(212,175,55,0.12);
 
     transition:.3s ease;
+
+    overflow-wrap:anywhere;
+    word-break:break-word;
+}
+
+.spec-link + .spec-link{
+
+    margin-top:14px;
 }
 
 .spec-link:hover{
@@ -868,11 +899,22 @@ footer p{
         width:100%;
 
         gap:18px;
+
+        overflow-x:auto;
+        flex-wrap:nowrap;
+
+        padding-bottom:4px;
+    }
+
+    nav::-webkit-scrollbar{
+        display:none;
     }
 
     nav a{
 
         font-size:.92rem;
+
+        white-space:nowrap;
     }
 
     .hero{
@@ -983,16 +1025,16 @@ footer p{
 
     .hash-value{
 
-        font-size:.92rem;
+        font-size:.88rem;
+
+        line-height:1.8;
     }
 
     .spec-link{
 
         width:100%;
 
-        text-align:center;
-
-        word-break:break-word;
+        font-size:.95rem;
     }
 
     footer{
@@ -1033,5 +1075,4 @@ footer p{
 
         transform:none !important;
     }
-
-              }
+   }
